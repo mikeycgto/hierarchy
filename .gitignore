@@ -19,6 +19,7 @@ rdoc
 pkg
 .bundle
 .rvmrc
+.ruby-version
 
 ## PROJECT::DOCUMENTATION
 .yardoc
