@@ -85,9 +85,7 @@ module Hierarchy
 
   def ancestors(options={})
     @ancestors ||= begin
-      return [] if top_level?
-      objects = self.class.ancestors_of(self).scoped(options).group_by(&:id)
-      index_path.map { |id| objects[id].first }
+      self.class.ancestors_of(self).where(options)
     end
   end
 
